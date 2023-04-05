@@ -1,1 +1,1 @@
-export default function HomePage() {}
+export const HomePage = () => {};

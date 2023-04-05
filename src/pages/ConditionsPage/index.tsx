@@ -1,1 +1,1 @@
-export default function ConditionsPage() {}
+export const ConditionsPage = () =>{}

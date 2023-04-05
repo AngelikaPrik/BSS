@@ -1,1 +1,1 @@
-export default function ProductListPage() {}
+export const ProductListPage = () => {}
