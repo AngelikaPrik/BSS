@@ -1,1 +1,1 @@
-export default function DeliveryPage() {}
+export const DeliveryPage =() => {}

@@ -1,1 +1,1 @@
-export default function AuthPage() {}
+export const AuthPage = () => {};
