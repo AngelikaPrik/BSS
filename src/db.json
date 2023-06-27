@@ -1,0 +1,35 @@
+{
+	"products": [
+	  {
+		 "brand": "CeraVe",
+		 "name": "CeraVe Moisturizing Cream",
+		 "price": 15.99,
+		 "rating": 4.5
+	  },
+	  {
+		 "brand": "Cetaphil",
+		 "name": "Cetaphil Gentle Skin Cleanser",
+		 "price": 9.99,
+		 "rating": 4.3
+	  },
+	  {
+		 "brand": "The Inkey List",
+		 "name": "The Inkey List Niacinamide",
+		 "price": 12.99,
+		 "rating": 4.2
+	  },
+	  {
+		 "brand": "Vaseline",
+		 "name": "Vaseline Petroleum Jelly",
+		 "price": 4.99,
+		 "rating": 4.0
+	  },
+	  {
+		 "brand": "Neutrogena",
+		 "name": "Neutrogena Hydro Boost Gel-Cream",
+		 "price": 19.99,
+		 "rating": 4.7
+	  }
+	]
+ }
+ 
