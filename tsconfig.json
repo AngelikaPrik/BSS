@@ -2,7 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@pages/*": ["./src/pages/*"],
-      "@widgets/*": ["./src/widgets/*"],
+      "@widgets": ["./src/widgets/index.ts"],
       "@features/*": ["./src/features/*"],
       "@entities/*": ["./src/entities/*"],
       "@shared/*": ["./src/shared/*"],
