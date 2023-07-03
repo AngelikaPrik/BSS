@@ -14,7 +14,7 @@ const Btn = styled(ButtonBase)(({ theme }) => ({
 
 export default function SButton({ btnName, children }: IProps) {
   const styles = () => {
-    if (btnName == 'cardBtn') {
+    if (btnName === 'cardBtn') {
       return {
         background: '#fff',
         color: '#000',
@@ -22,13 +22,13 @@ export default function SButton({ btnName, children }: IProps) {
         '@media (min-width: 1200px)': {},
       }
     }
-    if (btnName == 'formBtn') {
+    if (btnName === 'formBtn') {
       return {
         background: '#A397A1',
         color: '#fff',
       }
     }
-    if (btnName == 'loginBtn') {
+    if (btnName === 'loginBtn') {
       return {
         background: '#fff',
         color: '#000',

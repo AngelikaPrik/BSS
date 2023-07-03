@@ -10,3 +10,7 @@ html {
   box-sizing: border-box;
   background: #222222;
 }
+
+a {
+  text-decoration: none;
+}

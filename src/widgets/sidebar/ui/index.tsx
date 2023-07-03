@@ -46,7 +46,7 @@ const ListItemText = styled(Typography)({
 })
 
 export const Sidebar = () => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
   return (
     <StyledDrawer anchor='left' open={open} onClose={prev => setOpen(!prev)}>
