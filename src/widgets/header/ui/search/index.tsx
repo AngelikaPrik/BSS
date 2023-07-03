@@ -52,6 +52,7 @@ const StyledIcon = styled(Icon)({
   transition: 'all 1s',
 })
 
+
 export const Search = () => {
   const [inputVal, setInputVal] = useState('')
 
