@@ -12,7 +12,7 @@ const Btn = styled(ButtonBase)(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
 })) as React.FC<ButtonBaseProps>
 
-export default function SButton({ btnName, children }: IProps) {
+export const SButton = ({ btnName, children }: IProps) => {
   const styles = () => {
     if (btnName === 'cardBtn') {
       return {
