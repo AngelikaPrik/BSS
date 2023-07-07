@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Drawer, List, Typography, styled } from '@mui/material'
-import line from '@assets/Sidebar/line.svg'
 import closeIcon from '@assets/Sidebar/close.svg'
 
 const categories = ['Brands', 'Face care', 'Body care', 'Sale', 'All products']
@@ -13,29 +12,14 @@ const StyledDrawer = styled(Drawer)({
 
 const ListItem = styled(Box)({
   position: 'relative',
-  margin: '1rem 0',
   paddingBottom: '4px',
+  borderRadius:'1rem',
+  transition: 'all .3s ease-in-out',
+  padding: '.5rem 0',
   '&:hover': {
+    background:'#634F6052',
     cursor: 'pointer',
-    '&::after': {
-      width: '100%',
-      opacity: 1,
-      transform: 'translateX(0)',
-    },
-  },
-  '&::after': {
-    position: 'absolute',
-    content: '""',
-    backgroundImage: `url(${line})`,
-    backgroundSize: '100%',
-    backgroundPosition: '0 100%',
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: 0,
-    bottom: '-5px',
-    opacity: 0,
-    transform: 'translateX(-20%)',
-    transition: 'transform 0.2s ease-in-out, opacity 0.2s ease-in-out',
+    paddingLeft:'1rem'
   },
 })
 
@@ -50,7 +34,7 @@ export const Sidebar = () => {
 
   return (
     <StyledDrawer anchor='left' open={open} onClose={prev => setOpen(!prev)}>
-      <Box width={{ md: 320, sm: 300, xs: 280 }} p='0 4rem 0 6rem'>
+      <Box width={{ md: 320, sm: 300, xs: 280 }} p='0 4rem'>
         <Box
           width={{ lg: 32, xs: 24 }}
           m='15% 0 10%'
@@ -79,5 +63,5 @@ export const Sidebar = () => {
         </List>
       </Box>
     </StyledDrawer>
-  )
+  );
 }

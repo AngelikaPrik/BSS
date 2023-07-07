@@ -1,11 +1,4 @@
-import {
-  Box,
-  BoxProps,
-  IconButton,
-  Stack,
-  Typography,
-  styled,
-} from '@mui/material'
+import { Box, BoxProps, Stack, Typography, styled } from '@mui/material';
 import { useState } from 'react'
 
 const MyBox = styled(Box)({
@@ -14,7 +7,7 @@ const MyBox = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0.5rem 1rem',
+  padding: '0.4rem 1rem',
 }) as React.FC<BoxProps>
 
 type LanguageType = 'EN' | 'RU' | 'GE'
@@ -54,7 +47,7 @@ export const ChangeLanguage = () => {
 
   return (
     <>
-      <IconButton
+      <Box
         onClick={() => setShowLangs(!showLangs)}
         sx={{ position: 'relative' }}
       >
@@ -69,7 +62,7 @@ export const ChangeLanguage = () => {
             setCurrentLang={setCurrentLang}
           />
         )}
-      </IconButton>
+      </Box>
     </>
   )
 }
