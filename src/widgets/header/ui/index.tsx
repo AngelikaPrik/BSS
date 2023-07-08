@@ -8,10 +8,10 @@ import {
 } from '@mui/material'
 import { ChangeLanguage } from '@features/language/actions/ui'
 import { Search } from './search'
-import menu from '@assets/header/menu.svg'
-import logo from '@assets/header/logo.svg'
-import account from '@assets/header/account.svg'
-import cart from '@assets/header/cart.svg'
+import menu from '@assets/Header/menu.svg'
+import logo from '@assets/Header/logo.svg'
+import account from '@assets/Header/account.svg'
+import cart from '@assets/Header/cart.svg'
 
 const FlexBox = styled(Box)({
   display: 'flex',
@@ -31,7 +31,7 @@ const LogoBox = styled(Box)({
 
 export const Header = () => {
   return (
-    <Container maxWidth='xl' sx={{ mt: '4rem' }}>
+    <Container maxWidth='lg' sx={{ mt: '4rem' }}>
       <FlexBox sx={{ position: 'relative' }}>
         <FlexBox>
           <IconButton

@@ -8,9 +8,10 @@ html {
   font-size: 62.5%;
   height: 100%;
   box-sizing: border-box;
-  background: #222222;
+  background: #c9bcbc;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }

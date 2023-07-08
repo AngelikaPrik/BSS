@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { Header, Sidebar } from '@widgets'
+import { Footer, Header, Sidebar } from '@widgets'
 
 const theme = createTheme({
   typography: {
@@ -15,6 +15,13 @@ const theme = createTheme({
       },
       '@media (max-width:450px)': {
         fontSize: '2.2rem',
+      },
+    },
+    h5: {
+      fontSize: '1.6rem',
+      fontWeight: 500,
+      '@media (max-width:450px)': {
+        fontSize: '1.4rem',
       },
     },
   },
@@ -33,6 +40,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <Sidebar />
+      <Footer />
     </ThemeProvider>
   )
 }
