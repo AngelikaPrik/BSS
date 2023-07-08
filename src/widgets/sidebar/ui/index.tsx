@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Drawer, List, Typography, styled } from '@mui/material'
 import closeIcon from '@assets/Sidebar/close.svg'
+import { ChangeLanguage } from '@features/language/actions/ui'
 
 const categories = ['Brands', 'Face care', 'Body care', 'Sale', 'All products']
 const info = ['About us', 'Contact']
@@ -13,13 +14,13 @@ const StyledDrawer = styled(Drawer)({
 const ListItem = styled(Box)({
   position: 'relative',
   paddingBottom: '4px',
-  borderRadius:'1rem',
+  borderRadius: '1rem',
   transition: 'all .3s ease-in-out',
   padding: '.5rem 0',
   '&:hover': {
-    background:'#634F6052',
+    background: '#634F6052',
     cursor: 'pointer',
-    paddingLeft:'1rem'
+    paddingLeft: '1rem',
   },
 })
 
@@ -60,8 +61,15 @@ export const Sidebar = () => {
               </Link>
             </ListItem>
           ))}
+          <Box
+            mt={2}
+            width='50px'
+            sx={{ display: { sm: 'none', xs: 'block' }, bgcolor: 'black' }}
+          >
+            <ChangeLanguage />
+          </Box>
         </List>
       </Box>
     </StyledDrawer>
-  );
+  )
 }
