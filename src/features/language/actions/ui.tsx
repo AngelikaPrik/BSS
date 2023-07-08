@@ -1,13 +1,17 @@
-import { Box, BoxProps, Stack, Typography, styled } from '@mui/material';
+import { Box, BoxProps, Stack, Typography, styled } from '@mui/material'
+import { UseCloseClickOutside } from '@shared/lib/hooks'
 import { useState } from 'react'
 
-const MyBox = styled(Box)({
-  border: '.15rem solid #fff',
+const LanguageBox = styled(Box)({
+  border: '.2rem solid #fff',
   borderRadius: '1rem',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0.4rem 1rem',
+  '&:hover': {
+    cursor: 'pointer',
+    border: '.2rem solid #ffffff30',
+  },
 }) as React.FC<BoxProps>
 
 type LanguageType = 'EN' | 'RU' | 'GE'
@@ -30,7 +34,11 @@ const DropdownLangs = ({ currentLang, setCurrentLang }: Props) => {
     >
       {LANGUAGES.map(l => {
         return (
-          <Box key={l} onClick={() => setCurrentLang(l)}>
+          <Box
+            key={l}
+            onClick={() => setCurrentLang(l)}
+            sx={{ cursor: 'pointer', '&:hover': { opacity: 0.6 } }}
+          >
             <Typography fontWeight={275} variant='h4' color='primary'>
               {l !== currentLang && l}
             </Typography>
@@ -45,22 +53,34 @@ export const ChangeLanguage = () => {
   const [showLangs, setShowLangs] = useState<boolean>(false)
   const [currentLang, setCurrentLang] = useState<LanguageType>('EN')
 
+  let itemRef = UseCloseClickOutside(() => setShowLangs(false))
+
   return (
     <>
       <Box
         onClick={() => setShowLangs(!showLangs)}
         sx={{ position: 'relative' }}
       >
-        <MyBox>
-          <Typography fontWeight={275} variant='h4' color='primary'>
+        <LanguageBox
+          width={{ md: '40px', xs: '30px' }}
+          height={{ md: '40px', xs: '30px' }}
+        >
+          <Typography
+            fontWeight={275}
+            variant='h4'
+            color='primary'
+            fontSize={{ md: '2rem', xs: '1.6rem' }}
+          >
             {currentLang}
           </Typography>
-        </MyBox>
+        </LanguageBox>
         {showLangs && (
-          <DropdownLangs
-            currentLang={currentLang}
-            setCurrentLang={setCurrentLang}
-          />
+          <Box ref={itemRef}>
+            <DropdownLangs
+              currentLang={currentLang}
+              setCurrentLang={setCurrentLang}
+            />
+          </Box>
         )}
       </Box>
     </>
